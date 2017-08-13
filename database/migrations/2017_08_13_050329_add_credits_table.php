@@ -20,10 +20,10 @@ class AddCreditsTable extends Migration
             $table->double('percentage')->default(0.003);
             $table->integer('fee');
             $table->double('cost');
-            $table->string('account_number');
+            $table->integer('account_id');
 
             //foreings
-            $table->foreign('account_number')->references('number')->on('accounts')->onDelete('cascade');
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->timestamps();
         });
     }

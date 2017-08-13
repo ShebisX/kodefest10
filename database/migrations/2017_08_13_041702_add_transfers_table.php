@@ -16,12 +16,12 @@ class AddTransfersTable extends Migration
         Schema::create('transfers', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->double('amount');
-            $table->string('account_number');
+            $table->integer('account_id');
             $table->string('to');
             $table->string('from');
             $table->double('cost')->default(2500);
             //Foreing
-            $table->foreign('account_number')->references('number')->on('accounts')->onDelete('cascade');
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->timestamps();
         });
     }

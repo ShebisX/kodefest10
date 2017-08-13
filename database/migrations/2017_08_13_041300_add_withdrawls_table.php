@@ -17,9 +17,9 @@ class AddWithdrawlsTable extends Migration
             $table->increments('id')->unique();
             $table->double('amount');
             $table->double('cost')->default(2380);
-            $table->string('account_number');
+            $table->integer('account_id');
             //Foreing
-            $table->foreign('account_number')->references('number')->on('accounts')->onDelete('cascade');
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->timestamps();
         });
     }

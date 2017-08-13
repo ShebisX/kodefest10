@@ -14,14 +14,13 @@ class AddAccountsTable extends Migration
     public function up()
     {
         Schema::create('accounts', function (Blueprint $table) {
-            $table->string('number',10)->unique();
+            $table->increments('id')->unique();
             $table->double('amount');
             $table->string('password', 4);
             $table->enum('type',['Current','Saving'])->defult('Current');
             $table->string('user_id');
             //Foreings
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->primary('number');
             $table->timestamps();
         });
     }

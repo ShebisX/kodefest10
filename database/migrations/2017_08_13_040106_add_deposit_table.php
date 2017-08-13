@@ -13,12 +13,12 @@ class AddDepositTable extends Migration
      */
     public function up()
     {
-        Schema::create('deposit', function (Blueprint $table) {
+        Schema::create('deposits', function (Blueprint $table) {
             $table->increments('id')->unique();
             $table->double('amount');
-            $table->string('account_number');
+            $table->integer('account_id');
             //Foreing
-            $table->foreign('account_number')->references('number')->on('accounts')->onDelete('cascade');
+            $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class AddDepositTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('deposit');
+        Schema::dropIfExists('deposits');
     }
 }
