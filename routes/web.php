@@ -11,7 +11,7 @@
 |
 */
 
-Telegram::setWebhook(['url' => 'https://cf9e8cf4.ngrok.io/' . env('TELEGRAM_BOT_TOKEN', 'YOUR-BOT-TOKEN') . '/webhook',]);
+Telegram::setWebhook(['url' => 'https://kodefest10.herokuapp.com/' . env('TELEGRAM_BOT_TOKEN', 'YOUR-BOT-TOKEN') . '/webhook',]);
 
 Route::get('/', function () {
     return view('welcome');
