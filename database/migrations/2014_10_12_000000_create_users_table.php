@@ -21,7 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('telephone_number',20);
             $table->string('direction',120);
             $table->string('email',120);
-            $table->date('birthDate');
+            $table->date('birth_date');
+            $table->primary('id');
             $table->timestamps();
         });
     }

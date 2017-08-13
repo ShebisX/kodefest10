@@ -21,6 +21,7 @@ class AddAccountsTable extends Migration
             $table->string('user_id');
             //Foreings
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->primary('number');
             $table->timestamps();
         });
     }
