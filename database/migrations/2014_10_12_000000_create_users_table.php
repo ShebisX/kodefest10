@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->string('direction',120);
             $table->string('email',120);
             $table->date('birthDate');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
