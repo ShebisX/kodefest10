@@ -64,5 +64,6 @@ return [
         App\Http\BotCommands\MakeDepositCommand::class,
         App\Http\BotCommands\MakeWithdrawlCommand::class,
         App\Http\BotCommands\MakeTransferCommand::class,
+        App\Http\BotCommands\MyAmountCommand::class,
     ],
 ];
