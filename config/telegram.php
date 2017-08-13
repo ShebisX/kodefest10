@@ -58,5 +58,11 @@ return [
     'commands' => [
         Telegram\Bot\Commands\HelpCommand::class,
         App\Http\BotCommands\StartCommand::class,
+//        App\Http\BotCommands\KeyboardCommand::class,
+        App\Http\BotCommands\RegisterClientCommand::class,
+        App\Http\BotCommands\CreateAccountCommand::class,
+        App\Http\BotCommands\MakeDepositCommand::class,
+        App\Http\BotCommands\MakeWithdrawlCommand::class,
+        App\Http\BotCommands\MakeTransferCommand::class,
     ],
 ];

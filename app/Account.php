@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
     protected $table = "accounts";
-    protected $fillable=["number","amount", "password", "type", "user_id"];
+    protected $fillable=["amount", "password", "type", "user_id"];
 
     public function user()
     {

@@ -12,7 +12,7 @@
 */
 
 $app = new Illuminate\Foundation\Application(
-    realpath(__DIR__.'/../')
+    realpath(__DIR__ . '/../')
 );
 
 /*
@@ -51,5 +51,10 @@ $app->singleton(
 | from the actual running of the application and sending responses.
 |
 */
-
+$app->singleton("timestampInit", function () {
+    if (!isset($timestampInit)) {
+        $timestampInit = time();
+    }
+    return $timestampInit;
+});
 return $app;

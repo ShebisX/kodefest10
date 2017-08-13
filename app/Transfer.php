@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Transfer extends Model
 {
     protected $table = "transfers";
-    protected $fillable = ["amount", "account_number", "to", "from"];
+    protected $fillable = ["amount", "account_id", "to", "from", "cost"];
 
     public function account()
     {
